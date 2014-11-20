@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-1 5:12:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="org.uoa.bookshop.domain.Book" table="book" catalog="bookshop">
+        <id name="bookid" type="int">
+            <column name="bookid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="catalog" class="org.uoa.bookshop.domain.Catalog" fetch="select">
+            <column name="catalogid" not-null="true" />
+        </many-to-one>
+        <property name="bookname" type="string">
+            <column name="bookname" length="45" not-null="true" />
+        </property>
+        <property name="price" type="int">
+            <column name="price" not-null="true" />
+        </property>
+        <property name="picture" type="string">
+            <column name="picture" length="45" not-null="true" />
+        </property>
+        <set name="orderitems" table="orderitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="bookid" not-null="true" />
+            </key>
+            <one-to-many class="org.uoa.bookshop.domain.Orderitem" />
+        </set>
+    </class>
+</hibernate-mapping>

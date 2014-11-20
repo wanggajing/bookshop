@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-1 5:12:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="org.uoa.bookshop.domain.Orderitem" table="orderitem" catalog="bookshop">
+        <id name="orderitemid" type="int">
+            <column name="orderitemid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="book" class="org.uoa.bookshop.domain.Book" fetch="select">
+            <column name="bookid" not-null="true" />
+        </many-to-one>
+        <many-to-one name="orders" class="org.uoa.bookshop.domain.Orders" fetch="select">
+            <column name="orderid" not-null="true" />
+        </many-to-one>
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

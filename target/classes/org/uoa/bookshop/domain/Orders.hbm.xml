@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-1 5:12:29 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="org.uoa.bookshop.domain.Orders" table="orders" catalog="bookshop">
+        <id name="orderid" type="int">
+            <column name="orderid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="user" class="org.uoa.bookshop.domain.User" fetch="select">
+            <column name="userid" not-null="true" />
+        </many-to-one>
+        <property name="orderdate" type="timestamp">
+            <column name="orderdate" length="19" not-null="true" />
+        </property>
+        <set name="orderitems" table="orderitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="orderid" not-null="true" />
+            </key>
+            <one-to-many class="org.uoa.bookshop.domain.Orderitem" />
+        </set>
+    </class>
+</hibernate-mapping>
