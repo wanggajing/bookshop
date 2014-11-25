@@ -1,0 +1,39 @@
+.text1{
+	width:200px;
+	height:25px;
+}
+
+.bt1{
+	width:85px;
+	height:25px;
+}
+.font1 {
+	font-size: 16px;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #333;
+	text-decoration:none;
+}
+
+.font2 {
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+	text-decoration:none;
+}
+.font3 {
+	color: #666;
+	font-size: 18px;
+}
+.font4 {
+	color: #666;
+	font-weight: bold;
+}
+.footer{
+	float:right;
+	list-style-type:none;
+	width:240px;
+}
+.footer li{
+	float:left;
+	padding:5px;
+}

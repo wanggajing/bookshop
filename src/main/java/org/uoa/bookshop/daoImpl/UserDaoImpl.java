@@ -15,6 +15,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 	public void saveUser(User user) {
 		Session session = getSession();
 		session.save(user);
+		session.close();
 	}
 
 	@Override
@@ -30,6 +31,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 			User user = (User)users.get(0);
 			return user;
 		}
+		session.close();
 		return null;
 	}
 

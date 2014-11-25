@@ -1,0 +1,27 @@
+@charset "utf-8";
+.head {
+	
+	margin: 0 auto;
+	height: 130px;
+	width: 1000px;
+	border-bottom:1px solid #F12B0E;
+	
+}
+.head .img1{
+	float:left;
+}
+.head .img2{
+	float:left;
+	margin-left:180px;
+}
+
+
+.head .tb1{
+	float: left;
+	width: 300px;
+	
+	margin-top: 55px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 225px;
+}

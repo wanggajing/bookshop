@@ -31,4 +31,24 @@ public class UserAction extends ActionSupport {
 		}
 		return ERROR;
 	}
+	
+	public String logout() throws Exception {
+		Map session = ActionContext.getContext().getSession();
+		session.remove("user");
+		return SUCCESS;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public UserService getUserService() {
+		return userService;
+	}
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+	
+	
 }
