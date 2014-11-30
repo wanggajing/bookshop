@@ -6,7 +6,7 @@
   <table width="324" border="0" align="center" cellpadding="0" cellspacing="0" class="tb1">
     <tr>
       <td width="25%" height="30" align="left" class="font1"><a href="#" class="font1">首页</a></td>
-      <td width="25%" height="30" align="left" class="font1"><a href="#" class="font1">注册</a></td>
+      <td width="25%" height="30" align="left" class="font1"><a href="to_register.action" class="font1">注册</a></td>
       <td width="25%" height="30" align="left" class="font1"><a href="#" class="font1">登录</a></td>
       <td width="25%" height="30" align="left" class="font1"><a href="#" class="font1">关于我们</a></td>
     </tr>

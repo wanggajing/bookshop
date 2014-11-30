@@ -7,8 +7,28 @@
 	<constant name="struts.i18n.encoding" value="UTF-8"/>
 	
 	<package name="default" extends="struts-default">
+		<action name="register" class="userAction" method="register">
+			<result>/WEB-INF/pages/register_success.jsp</result>
+		</action>
+		
+		<action name="login" class="userAction">
+			<result>/WEB-INF/pages/login_success.jsp</result>
+			<result name="error">/WEB-INF/pages/login_error.jsp</result>
+		</action>
+		
+		<action name="catalogAction" class="catalogAction" method="getCatalogName">
+			<result>/WEB-INF/pages/menu.jsp</result>
+			<result name="error">/WEB-INF/pages/index.jsp</result>
+		</action>
+		
+		<!-- page direct action -->
+		<action name="to_register">
+			<result>/WEB-INF/pages/register.jsp</result>
+		</action>
+		<!-- end -->
+		
 		<action name="*">
-		<result>/WEB-INF/pages/head.jsp</result>
+			<result>/WEB-INF/pages/index.jsp</result>
 		</action>
 	</package>
 </struts>

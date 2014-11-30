@@ -2,8 +2,9 @@ package org.uoa.bookshop.serviceImpl;
 
 import org.uoa.bookshop.dao.UserDao;
 import org.uoa.bookshop.domain.User;
+import org.uoa.bookshop.service.UserService;
 
-public class UserServiceImpl implements UserDao {
+public class UserServiceImpl implements UserService {
 	
 	private UserDao userDao;
 	@Override
